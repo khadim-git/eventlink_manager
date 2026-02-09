@@ -1,0 +1,29 @@
+{
+  "name": "eventlink-manager-backend",
+  "version": "1.0.0",
+  "description": "Backend API for EventLink Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "migrate": "node migrate.js",
+    "seed": "node seeder.js",
+    "migrate:fresh": "node migrate.js && node seeder.js",
+    "db:reset": "node migrate.js && node seeder.js",
+    "test": "node test-setup.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "cors": "^2.8.5",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "multer": "^1.4.5-lts.1",
+    "csv-parser": "^3.0.0",
+    "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
